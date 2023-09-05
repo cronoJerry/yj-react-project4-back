@@ -12,12 +12,12 @@ const PORT = 8080;
 const app = express();
 
 const corsOptions = {
-  origin: [
-    "http://localhost:3000",
-    "https://merry-starship-9d7e2f.netlify.app",
-  ],
-  methods: ["GET", "POST"],
-  credentials: true,
+	origin: [
+		"http://localhost:3000",
+		"https://euphonious-piroshki-f5028c.netlify.app",
+	],
+	methods: ["GET", "POST"],
+	credentials: true,
 };
 
 // 미들웨어 부분
@@ -32,6 +32,6 @@ app.use("/api/foods", foodsRouter);
 app.use("/api/users", userRouter);
 
 const handleListening = () =>
-  console.log(`😍Server listening on port http://localhost:${PORT}`);
+	console.log(`😍Server listening on port http://localhost:${PORT}`);
 
 app.listen(PORT, handleListening);
