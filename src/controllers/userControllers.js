@@ -71,7 +71,7 @@ export const postUsernameSignIn = async (req, res) => {
 
 export const getLoginSuccess = async (req, res) => {
 	try {
-		const token = req.cookies?.accessToken;
+		const token = req.cookies.accessToken;
 		const data = jwt.verify(token, process.env.ACCESS_SECRET);
 		const userData = await User.findOne({ _id: data.id });
 
