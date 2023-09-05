@@ -133,12 +133,12 @@ var postUsernameSignIn = /*#__PURE__*/function () {
 exports.postUsernameSignIn = postUsernameSignIn;
 var getLoginSuccess = /*#__PURE__*/function () {
   var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(req, res) {
-    var token, data, userData;
+    var _req$cookies, token, data, userData;
     return _regeneratorRuntime().wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
           _context3.prev = 0;
-          token = req.cookies.accessToken;
+          token = (_req$cookies = req.cookies) === null || _req$cookies === void 0 ? void 0 : _req$cookies.accessToken;
           data = _jsonwebtoken["default"].verify(token, process.env.ACCESS_SECRET);
           _context3.next = 5;
           return _user["default"].findOne({
